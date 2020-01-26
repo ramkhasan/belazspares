@@ -1,0 +1,61 @@
+.navbar
+    background-color: #191919
+    padding: 25px 0
+    &-block
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__info
+        display: flex
+        align-items: center
+    &__contacts
+        display: flex
+        align-items: center
+    &__mode
+        display: flex
+        flex-direction: column
+        text-align: center
+    &__time
+        color: $text-color
+        font-size: 14px
+        font-weight: 700
+    &__days
+        color: $text-color
+        font-size: 12px
+    &__phone
+        display: flex
+        flex-direction: column
+        margin-left: 185px
+    &__first-tel
+        color: $text-color
+        font-size: 18px
+        font-weight: 400
+        text-decoration: none
+    &__second-tel
+        color: $text-color
+        font-size: 18px
+        font-weight: 400
+        text-decoration: none    
+        margin-top: 14px
+    &__button
+        margin-left: 28px
+        color: $text-color
+        font-size: 12px
+        font-weight: 700
+        text-transform: uppercase
+@media (max-width: 1200px)
+    .navbar 
+        &__phone
+            margin-left: 40px
+@media (max-width: 768px)
+    .navbar
+        &__contacts
+            display: none        
+@media (max-width: 480px)
+    .navbar
+        &__button
+            font-size: 10px
+            padding: 16px 19px
+        &__logo
+            width: 140px
+        

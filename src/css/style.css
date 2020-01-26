@@ -1,0 +1,155 @@
+@charset "UTF-8";
+body {
+  font-family: sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  width: 1170px;
+  margin: auto;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 760px;
+    width: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 580px;
+    width: 95%;
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    max-width: 750px;
+    width: 95%;
+  }
+}
+
+.button {
+  background-color: #1669b3;
+  border: none;
+  padding: 21px 28px;
+}
+
+/* Импорт стилей шапки */
+.navbar {
+  background-color: #191919;
+  padding: 25px 0;
+}
+
+.navbar-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar__contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar__mode {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.navbar__time {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.navbar__days {
+  color: #ffffff;
+  font-size: 12px;
+}
+
+.navbar__phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 185px;
+}
+
+.navbar__first-tel {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.navbar__second-tel {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+  margin-top: 14px;
+}
+
+.navbar__button {
+  margin-left: 28px;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1200px) {
+  .navbar__phone {
+    margin-left: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar__contacts {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar__button {
+    font-size: 10px;
+    padding: 16px 19px;
+  }
+  .navbar__logo {
+    width: 140px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
