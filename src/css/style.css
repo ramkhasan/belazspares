@@ -1,6 +1,36 @@
 @charset "UTF-8";
+@font-face {
+  font-family: 'Proxima Nova Regular';
+  src: url("../fonts/ProximaNova/ProximaNova-Regular.eot");
+  src: url("../fonts/ProximaNova/ProximaNova-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova/ProximaNova-Regular.woff") format("woff"), url("../fonts/ProximaNova/ProximaNova-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova Bold';
+  src: url("../fonts/ProximaNova/ProximaNova-Bold.eot");
+  src: url("../fonts/ProximaNova/ProximaNova-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova/ProximaNova-Bold.woff") format("woff"), url("../fonts/ProximaNova/ProximaNova-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova Black';
+  src: url("../fonts/ProximaNova/ProximaNova-Black.eot");
+  src: url("../fonts/ProximaNova/ProximaNova-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova/ProximaNova-Black.woff") format("woff"), url("../fonts/ProximaNova/ProximaNova-Black.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Стили интерфейса */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
-  font-family: sans-serif;
+  font-family: 'Proxima Nova Regular', sans-serif;
 }
 
 img {
@@ -36,13 +66,39 @@ img {
 .button {
   background-color: #1669b3;
   border: none;
-  padding: 21px 28px;
+  padding: 20px 30px;
+  color: #ffffff;
+  font-size: 17px;
+  text-transform: uppercase;
 }
 
-/* Импорт стилей шапки */
+.button:hover {
+  background-color: #1c84e0;
+  cursor: pointer;
+}
+
+.section {
+  padding: 93px 0;
+}
+
+.section-title {
+  font-size: 36px;
+  font-family: 'Proxima Nova Black', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.input {
+  background-color: #f2f2f2;
+  padding: 30px;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+/* Стили для шапки */
 .navbar {
   background-color: #191919;
-  padding: 25px 0;
+  padding: 24px 0;
 }
 
 .navbar-block {
@@ -84,17 +140,13 @@ img {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
+  color: #ffffff;
+  font-size: 12px;
 }
 
 .navbar__time {
-  color: #ffffff;
-  font-size: 14px;
   font-weight: 700;
-}
-
-.navbar__days {
-  color: #ffffff;
-  font-size: 12px;
+  padding-bottom: 13px;
 }
 
 .navbar__phone {
@@ -106,29 +158,25 @@ img {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-left: 185px;
+  font-family: 'Proxima Nova Black', sans-serif;
 }
 
 .navbar__first-tel {
   color: #ffffff;
   font-size: 18px;
-  font-weight: 400;
   text-decoration: none;
+  margin-bottom: 10px;
 }
 
 .navbar__second-tel {
   color: #ffffff;
   font-size: 18px;
-  font-weight: 400;
   text-decoration: none;
-  margin-top: 14px;
 }
 
 .navbar__button {
   margin-left: 28px;
-  color: #ffffff;
   font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
 }
 
 @media (max-width: 1200px) {
@@ -150,6 +198,165 @@ img {
   }
   .navbar__logo {
     width: 140px;
+  }
+}
+
+/* Cтили для главного экрана */
+.hero {
+  background: url("../img/hero/hero-bg.jpg") no-repeat;
+  background-position: center center;
+}
+
+.hero-text {
+  background-color: #f7b516;
+  width: 570px;
+  height: 860px;
+  padding: 59px 100px;
+}
+
+.hero-text__title {
+  font-family: 'Proxima Nova Black', sans-serif;
+  font-size: 40px;
+  line-height: 55px;
+  text-transform: uppercase;
+}
+
+.hero-text__subtitle {
+  font-family: 'Proxima Nova Black', sans-serif;
+  display: inline-block;
+  font-size: 25px;
+  padding-top: 7px;
+  margin-bottom: 96px;
+}
+
+.hero-list {
+  margin: 0;
+  padding: 0;
+}
+
+.hero-list__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 46px;
+}
+
+.hero-list__image {
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 20px;
+}
+
+.hero-list__text {
+  max-width: 265px;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    background: #f7b516;
+  }
+  .hero-text {
+    width: 100%;
+    height: 100%;
+    padding: 59px 55px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text {
+    padding: 50px 30px;
+  }
+  .hero-text__title {
+    font-size: 28px;
+    line-height: 43px;
+  }
+}
+
+/* Cтили для блока price */
+.price {
+  background: url("../img/price/price-bg.jpg") no-repeat;
+  background-position: center;
+  height: 500px;
+}
+
+.price-block {
+  padding-left: 382px;
+}
+
+.price__title {
+  font-size: 30px;
+  text-align: right;
+  padding-left: 324px;
+  padding-right: 18px;
+  padding-bottom: 60px;
+}
+
+.price__info {
+  display: inline-block;
+  width: 187px;
+  color: #000000;
+  font-size: 14px;
+  margin-left: 124px;
+  margin-right: 29px;
+  text-align: right;
+}
+
+.price__input {
+  width: 370px;
+  height: 70px;
+  border: none;
+  margin-bottom: 30px;
+  background: url("../img/price/call-answer.png") no-repeat;
+  background-position: center right 30px;
+  background-color: #f2f2f2;
+}
+
+.price__input:first-child {
+  margin-right: 26px;
+  background: url("../img/price/envelope.png") no-repeat;
+  background-position: center right 30px;
+  background-color: #f2f2f2;
+}
+
+.price__button {
+  padding: 31px 110px;
+  margin-left: 30px;
+}
+
+.price__info-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 1200px) {
+  .price-block {
+    padding-left: 210px;
+  }
+  .price__title {
+    padding-left: 0;
+  }
+  .price__info-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .price__button {
+    margin-left: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */

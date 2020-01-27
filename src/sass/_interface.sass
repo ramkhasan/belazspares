@@ -1,5 +1,7 @@
+*
+    box-sizing: border-box    
 body
-    font-family: sans-serif
+    +reg
 img
     max-width: 100%
 .container
@@ -20,4 +22,22 @@ img
 .button
     background-color: $main-color
     border: none
-    padding: 21px 28px
+    padding: 20px 30px
+    color: $text-color
+    font-size: 17px
+    text-transform: uppercase
+    &:hover
+        background-color: lighten($main-color, 10%)
+        cursor: pointer 
+.section 
+    padding: 93px 0
+    &-title 
+        font-size: 36px
+        +black 
+        padding: 0
+        margin: 0
+.input 
+    background-color: $input-color
+    padding: 30px
+    font-size: 13px
+    text-transform: uppercase

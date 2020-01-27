@@ -1,0 +1,49 @@
+.price
+    background: url('../img/price/price-bg.jpg') no-repeat
+    background-position: center
+    height: 500px
+    &-block
+        padding-left: 382px
+    &__title 
+        font-size: 30px
+        text-align: right
+        padding-left: 324px
+        padding-right: 18px 
+        padding-bottom: 60px
+    &__info
+        display: inline-block
+        width: 187px
+        color: $main_text-color
+        font-size: 14px
+        margin-left: 124px
+        margin-right: 29px 
+        text-align: right
+    &__input     
+        width: 370px
+        height: 70px 
+        border: none    
+        margin-bottom: 30px    
+        background: url('../img/price/call-answer.png') no-repeat 
+        background-position: center right 30px
+        background-color: $input-color         
+        &:first-child
+            margin-right: 26px        
+            background: url('../img/price/envelope.png') no-repeat 
+            background-position: center right 30px
+            background-color: $input-color
+    &__button 
+        padding: 31px 110px
+        margin-left: 30px
+    &__info-block 
+        display: flex
+        align-items: center
+@media (max-width: 1200px)
+    .price
+        &-block
+            padding-left: 210px
+        &__title 
+            padding-left: 0
+        &__info-block 
+            flex-direction: column
+        &__button 
+            margin-left: 0
